@@ -5,7 +5,7 @@
 
 **HTTP client for GleamRPC**
 
-Call your GleamRPC procedures via HTTP. Should be used with gleamrpc_http_server.
+Call your GleamRPC procedures via HTTP. Should be used with [gleamrpc_http_server](https://hexdocs.pm/gleamrpc_http_server/).
 
 Query data is sent in the request query while the Mutation's data is sent in the body in Json.
 
