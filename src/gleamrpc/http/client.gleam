@@ -196,10 +196,9 @@ fn configure_mutation(
 }
 
 fn generate_path(procedure: gleamrpc.Procedure(a, b)) -> String {
+  // Adding procedure.name in router_paths allows us to have it at the end and avoid double slashes if no router
   "/api/gleamRPC/"
-  <> router_paths(procedure.router, []) |> string.join("/")
-  <> "/"
-  <> procedure.name
+  <> router_paths(procedure.router, [procedure.name]) |> string.join("/")
 }
 
 fn router_paths(
